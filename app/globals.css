@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Palette: a calm teal on a cool off-white, taken from a topographic map. Colours are HSL triples
+ * so Tailwind can add opacity. Text pairs were chosen for at least 4.5:1 contrast.
+ */
+@layer base {
+  :root {
+    --background: 150 14% 97%;
+    --foreground: 215 30% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 30% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 30% 16%;
+    --primary: 168 78% 22%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 160 18% 93%;
+    --secondary-foreground: 215 30% 16%;
+    --muted: 160 14% 94%;
+    --muted-foreground: 215 12% 38%;
+    --accent: 165 30% 91%;
+    --accent-foreground: 168 78% 18%;
+    --destructive: 0 72% 42%;
+    --destructive-foreground: 0 0% 100%;
+    /* Error text on the page background. */
+    --destructive-text: 0 72% 42%;
+    --border: 160 12% 87%;
+    --input: 160 12% 80%;
+    --ring: 168 78% 28%;
+    /* The faint contour lines of the brand motif. */
+    --contour: 160 16% 82%;
+    --radius: 0.625rem;
+  }
+  .dark {
+    --background: 170 16% 7%;
+    --foreground: 150 14% 94%;
+    --card: 170 14% 10%;
+    --card-foreground: 150 14% 94%;
+    --popover: 170 14% 10%;
+    --popover-foreground: 150 14% 94%;
+    --primary: 166 62% 50%;
+    --primary-foreground: 170 30% 8%;
+    --secondary: 170 12% 15%;
+    --secondary-foreground: 150 14% 94%;
+    --muted: 170 12% 14%;
+    --muted-foreground: 150 8% 66%;
+    --accent: 170 20% 16%;
+    --accent-foreground: 166 62% 70%;
+    /* Filled destructive buttons need a deep red under white text; text needs a light one. */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --destructive-text: 0 90% 70%;
+    --border: 170 10% 18%;
+    --input: 170 10% 24%;
+    --ring: 166 62% 50%;
+    --contour: 170 10% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), var(--font-body), ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.015em;
+  }
+}

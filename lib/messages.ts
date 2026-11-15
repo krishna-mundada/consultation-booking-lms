@@ -1,0 +1,35 @@
+// User-facing text that more than one place needs. One definition means one wording, and the
+// tests assert against these rather than re-typing them.
+
+export const MESSAGES = {
+  /** Used whenever the real cause must not reach the user. */
+  generic: "Something went wrong",
+  notAuthenticated: "Not authenticated",
+  forbidden: "Forbidden",
+  crossSiteRequest: "Requests from another site are not allowed",
+  notFound: "Not found",
+  invalidRequest: "Invalid request",
+  invalidJson: "Request body must be valid JSON",
+  unsupportedMediaType: "Content-Type must be application/json",
+  cancelledIsFinal: "This consultation is cancelled and can no longer be changed",
+  notOnSlot: "Pick one of the available half-hour slots",
+  slotTaken: "That time was just taken. Please pick another slot.",
+  studentBusy: "You already have a consultation at that time.",
+  notStartedYet: "This consultation has not started yet, so it cannot be marked complete",
+  alreadyStarted: "That consultation has already started and can no longer be changed",
+  unknownParameter: "Unknown query parameter",
+  tutorHasUpcoming: "This tutor has upcoming consultations: choose to cancel them or keep them",
+  chooseTutor: "Choose a tutor from the list",
+  enterName: "Enter your first and last name.",
+  sessionExpired: "Your session has expired. Please sign in again.",
+  networkError: "Could not reach the server. Check your connection and try again.",
+  weakPassword: "Use at least 8 characters, including letters and numbers.",
+  passwordMismatch: "The two passwords do not match.",
+  incorrectLogin: "Incorrect email or password.",
+  accountMayExist: "That email may already have an account. Try logging in, or reset your password.",
+  confirmEmail: "Confirm your email address first. Check your inbox for the link.",
+  tooManyAttempts: "Too many attempts. Wait a minute and try again.",
+  samePassword: "Choose a new password that is different from your current one.",
+  resetLinkExpired: "This reset link has expired. Request a new one.",
+  chooseTime: "Choose a day and a time",
+} as const;
